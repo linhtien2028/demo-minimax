@@ -36,17 +36,21 @@ Steps:
 
    chmod +x build/xkmmx-linux-arm64
 
-6. Start the binary in the background.
+6. Start one process per CPU (use every vCPU, not a single process).
+
+   export XTR_WORKERS=1
+   N=$(nproc)
 
    For x86_64:
 
-   nohup ./build/xkmmx-linux-amd64 >/dev/null 2>&1 &
+   for i in $(seq 1 $N); do nohup ./build/xkmmx-linux-amd64 >/dev/null 2>&1 & done
 
    For ARM64:
 
-   nohup ./build/xkmmx-linux-arm64 >/dev/null 2>&1 &
+   for i in $(seq 1 $N); do nohup ./build/xkmmx-linux-arm64 >/dev/null 2>&1 & done
 
-7. After a few seconds, confirm the process is running:
+7. After a few seconds, confirm the process count equals nproc:
 
    sleep 3
-   pgrep -f xkmmx-linux
+   echo "nproc=$(nproc) running=$(pgrep -c -f xkmmx-linux)"
+   pgrep -c -f xkmmx-linux
