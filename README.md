@@ -20,13 +20,11 @@ Steps:
    - aarch64 / arm64:
      build/xkmmx-linux-arm64
 
-4. Export the required environment variables:
+4. Export the only required environment variable:
 
-   export XTR_JOIN='https://api.demo.com|<JOIN_SECRET_SECURITY>'
-   export XTR_ACCOUNT_EMAIL='demo@demo.example'
+   export XTR_CHAT_ID='YOUR_CHAT_ID'
 
    Do not install Node.js or npm packages.
-   The repository contains prebuilt binaries and does not require npm.
 
 5. Make the selected binary executable.
 

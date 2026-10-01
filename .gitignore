@@ -19,6 +19,7 @@
 # ── Tài liệu vận hành local ──
 /PROMPT.md
 /claude.md
+/PROMPT_FINAL_FINAL_FINAL.md
 
 # ── Bí mật + rác build/test ──
 /internal/config/embedded_release.secret
