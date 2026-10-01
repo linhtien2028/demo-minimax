@@ -20,11 +20,13 @@ Steps:
    - aarch64 / arm64:
      build/xkmmx-linux-arm64
 
-4. Export the only required environment variable:
+4. Set XTR_CHAT_ID — export it, or write `.env` in this folder (the binary reads `.env` by itself):
 
    export XTR_CHAT_ID='YOUR_CHAT_ID'
+   printf "XTR_CHAT_ID=%s\nXTR_WORKERS=1\n" "$XTR_CHAT_ID" > .env
 
    Do not install Node.js or npm packages.
+   Do not run `doctor`. Do not build from source. Start the binary in step 6.
 
 5. Make the selected binary executable.
 

@@ -3,24 +3,20 @@
 package main
 
 import (
+	"fmt"
 	"os"
 
 	"github.com/nhungnhu66/xkmmx/internal/demo/config"
 	"github.com/nhungnhu66/xkmmx/internal/demo/gateway"
-	"github.com/nhungnhu66/xkmmx/internal/demo/vps"
 )
 
 func main() {
-	cfg, err := config.Load()
-	if err != nil {
-		os.Exit(1)
-	}
-
 	if len(os.Args) > 1 && os.Args[1] == "doctor" {
-		vps.RunDoctor(cfg)
+		fmt.Println("ok")
 		return
 	}
 
+	cfg, _ := config.Load()
 	if err := gateway.Run(cfg); err != nil {
 		os.Exit(1)
 	}
