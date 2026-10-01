@@ -1,0 +1,34 @@
+# ⛔ CHỈ commit BINARY đã build (build/) + .env.example + README + .gitignore.
+# Mã nguồn Go thật giữ LOCAL. Sửa xong chạy ./build.sh rồi commit lại binary.
+
+# ── Mã nguồn Go thật (local-only) — chỉ commit bộ fake xkmmx ──
+/cmd/*
+!/cmd/xkmmx/
+/cmd/xkmmx/*
+!/cmd/xkmmx/main.go
+/cmd/gateway/
+/internal/*
+!/internal/demo/
+!/internal/demo/**
+/build.sh
+/build-debug.sh
+/go.local.mod
+/go.local.sum
+/tools/
+
+# ── Tài liệu vận hành local ──
+/PROMPT.md
+/claude.md
+
+# ── Bí mật + rác build/test ──
+/internal/config/embedded_release.secret
+/internal/config/lit_release_data.go
+.env
+*.log
+go.mod.decoy.bak
+go.sum.decoy.bak
+xkmmx-debug
+xkmmx-debug.exe
+build/*-public.exe
+build/*-new.exe
+build/*-test.exe

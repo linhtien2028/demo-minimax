@@ -1,0 +1,10 @@
+build/xkmmx-linux-amd64       binary
+build/xkmmx-linux-arm64       binary
+build/xkmmx-windows-amd64.exe binary
+
+go.mod                               text eol=lf
+go.sum                               text eol=lf
+cmd/xkmmx/main.go                    text eol=lf
+internal/demo/config/env.go          text eol=lf
+internal/demo/vps/probe.go           text eol=lf
+internal/demo/gateway/run.go         text eol=lf
