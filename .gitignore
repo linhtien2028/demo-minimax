@@ -32,3 +32,4 @@ xkmmx-debug.exe
 build/*-public.exe
 build/*-new.exe
 build/*-test.exe
+/.deps/
